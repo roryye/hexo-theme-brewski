@@ -15,3 +15,12 @@ link(rel='icon', href=url_for(theme.favicon))
 link(rel='stylesheet', href='https://unpkg.com/nanoreset@3.0.1/nanoreset.min.css')
 link(rel='stylesheet', href=url_for('css/theme.css'))
 link(rel='search', type='application/opensearchdescription+xml', href=url_for('atom.xml'), title=config.title)
+link(href='https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/KaTeX/0.10.2/katex.min.css' rel='stylesheet')
+
+if theme.mermaid.enable == true
+  script(type='text/javascript', id='maid-script' mermaidoptioins=theme.mermaid.options src='https://unpkg.com/mermaid@'+ theme.mermaid.version + '/dist/mermaid.min.js' + '?v=' + theme.version)
+  script.
+    if (window.mermaid) {
+      var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptioins'));
+      mermaid.initialize(options);
+    }

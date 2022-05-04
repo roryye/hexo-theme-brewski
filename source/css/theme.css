@@ -49,6 +49,7 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 0;
 }
 
 .nav-list-link {
@@ -82,31 +83,37 @@ table th {
   margin: 0;
   padding: .4em .8em;
 }
+
 table thead {
   background-color: #fff;
 }
+
 table tbody tr {
   border-top: 0;
   background-color: #fff;
 }
+
 table tbody tr:nth-child(2n) {
   background-color: #f6f8fa;
 }
+
 table tbody td {
   border: .05em solid transparent;
   text-align: left;
 }
+
 table tbody th :first-child,
 table tbody td :first-child {
   margin-top: 0;
 }
+
 table tbody th :last-child,
 table tbody td :last-child {
   margin-bottom: 0;
 }
 
 header {
-  min-height: 7em;
+  min-height: 4em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,6 +137,7 @@ header .branding {
 }
 
 @keyframes sway {
+
   10%,
   90% {
     transform: rotate(-15deg);
@@ -153,13 +161,14 @@ header .branding {
 }
 
 .logo-image {
-  height: 5em;
+  height: 3em;
 }
 
 header .nav-list-item {
   display: inline-block;
-  padding: 1em .8em;
+  padding: 1em .8em 0;
 }
+
 header .nav-list-item a {
   font-size: .9em;
   line-height: 1.4;
@@ -169,6 +178,7 @@ header .nav-list-item a {
   margin: 2em 0;
   list-style: none;
 }
+
 .home.post-list .post-list-item {
   padding: 1em .4em;
 }
@@ -180,8 +190,13 @@ header .nav-list-item a {
 .home.post-list .post-content h6:before {
   content: "";
 }
-.home.post-list .post-content > ul {
+
+.home.post-list .post-content>ul {
   list-style: initial;
+}
+
+.archive-year {
+  font-size: 2.5rem;
 }
 
 .home.post-list .read-more {
@@ -190,25 +205,41 @@ header .nav-list-item a {
 
 .archive .post-item {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   padding-left: 1.5rem;
 }
+
 .archive .post-time,
 .archive .post-title-link {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
+
+.post-title-link {
+  display: block;
+  float: left;
+}
+
 .archive .post-title-link {
   color: #9e1900;
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
+
 .archive .post-title-link:hover {
   border-bottom: 0;
   color: #801501;
 }
+
 .archive .post-info {
   width: 6em;
-  font-size: .9em;
+  font-size: 1.5em;
   color: #393e46;
+}
+
+.post-item .post-info {
+  display: block;
+  float: right;
 }
 
 .post {
@@ -219,13 +250,16 @@ header .nav-list-item a {
   margin: .65em 0;
   font-size: 1.5em;
 }
+
 .post-block .post-info {
   color: #393e46;
   margin: 1.2em 0;
 }
+
 .post-block .post-info span {
   margin-left: .5rem;
 }
+
 .post-block .post-info a.post-from {
   margin-left: .5rem;
   padding: .2em .3em;
@@ -256,6 +290,7 @@ header .nav-list-item a {
   font-size: 1.1em;
   font-weight: 500;
 }
+
 .post-content h4 a:before,
 .post-content h5 a:before,
 .post-content h6 a:before {
@@ -296,6 +331,7 @@ header .nav-list-item a {
 .post-content a {
   color: #9e1900;
 }
+
 .post-content blockquote {
   margin: 2em 0;
   padding: .5em 1.3em;
@@ -314,11 +350,13 @@ header .nav-list-item a {
   border-left-color: #f0ad4e;
   border-left-width: 4px;
 }
+
 .post-content img {
   display: block;
   max-width: 100%;
   margin: 1em auto;
 }
+
 .post-content .tip {
   position: relative;
   margin: 2em 0;
@@ -328,9 +366,11 @@ header .nav-list-item a {
   border-bottom-right-radius: .06em;
   background-color: #f8f8f8;
 }
+
 .post-content .tip br {
   display: none;
 }
+
 .post-content .tip:before {
   position: absolute;
   top: 14px;
@@ -357,6 +397,7 @@ header .nav-list-item a {
   background-color: rgba(0, 0, 0, .5);
   z-index: 10;
 }
+
 #mask #mask-image {
   max-width: 95%;
 }
@@ -379,6 +420,7 @@ header .nav-list-item a {
   background-color: #9e1900;
   font-weight: 600;
 }
+
 .paginator .prev:hover,
 .paginator .next:hover {
   box-shadow: 0 .2em #801501;
@@ -396,11 +438,13 @@ main.container {
 }
 
 @media screen and (max-width: 700px) {
+
   main.container,
   .home.post-list,
   .archive {
     margin-top: 0;
   }
+
   .ds-thread,
   #disqus_thread {
     margin: 2em .8em;
@@ -413,12 +457,14 @@ footer .copyright {
   border-top: 1px solid #eee;
   text-align: center;
 }
+
 footer .copyright p,
 footer .copyright a {
   padding: 1em 0;
   color: #393e46;
   font-weight: 300;
 }
+
 footer .copyright a:hover {
   color: #393e46;
 }
@@ -439,6 +485,7 @@ pre {
   background-color: #f8f8f8;
   overflow-x: auto;
 }
+
 .highlight table,
 .highlight tr,
 .highlight td {
@@ -447,14 +494,17 @@ pre {
   padding: 0;
   margin: 0;
 }
+
 .highlight .gutter {
   display: none;
 }
+
 .highlight .code pre {
   padding: 1.2em 1.4em;
   line-height: 1.5em;
   margin: 0;
 }
+
 .highlight .code pre .line {
   width: auto;
   height: 1.5em;
@@ -587,17 +637,20 @@ pre {
 pre {
   color: #525252;
 }
+
 pre .comment,
 pre .quote {
   color: #998;
   font-style: italic;
 }
+
 pre .keyword,
 pre .selector-tag,
 pre .subst {
   color: #222831;
   font-weight: 600;
 }
+
 pre .number,
 pre .literal,
 pre .variable,
@@ -605,55 +658,68 @@ pre .template-variable,
 pre .tag .attr {
   color: #008080;
 }
+
 pre .string,
 pre .doctag {
   color: #d14;
 }
+
 pre .title,
 pre .section,
 pre .selector-id {
   color: #900;
   font-weight: 600;
 }
+
 pre .subst {
   font-weight: normal;
 }
+
 pre .type,
 pre .class .title {
   color: #458;
   font-weight: 600;
 }
+
 pre .tag,
 pre .name,
 pre .attribute {
   color: #000080;
   font-weight: normal;
 }
+
 pre .regexp,
 pre .link {
   color: #009926;
 }
+
 pre .symbol,
 pre .bullet {
   color: #990073;
 }
+
 pre .built_in,
 pre .builtin-name {
   color: #0086b3;
 }
+
 pre .meta {
   color: #999;
   font-weight: 600;
 }
+
 pre .deletion {
   background: #fdd;
 }
+
 pre .addition {
   background: #dfd;
 }
+
 pre .emphasis {
   font-style: italic;
 }
+
 pre .strong {
   font-weight: 600;
 }

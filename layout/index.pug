@@ -1,8 +1,21 @@
+//- extends partial/layout.pug
+
+//- block container
+//-     include mixins/post.pug
+//-     +posts()
+
+//- block pagination
+//-     include mixins/paginator.pug
+//-     +home()
+
+//- block copyright
+//-     include partial/copyright.pug
+
 extends partial/layout.pug
 
 block container
     include mixins/post.pug
-    +posts()
+    +postList()
 
 block pagination
     include mixins/paginator.pug
